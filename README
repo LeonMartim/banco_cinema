@@ -1,0 +1,65 @@
+Banco de Dados Cinema
+
+Um banco de dados simples para estudo de **modelagem relacional**, **restrições**, **chaves estrangeiras**, **consultas SQL**, **Tratamento de erros** além disso a pricipal ideia é traballhar com **integridade referencial** de forma básica e conerxão com a **linguagem python**.
+
+## Estrutura
+
+Tabelas principais:
+- `Ator`: informações sobre atores.
+- `Filme`: dados sobre filmes (nome, data de lançamento, orçamento, tempo).
+- `Personagem`: relação entre atores e filmes (N:N).
+
+## Tecnologias
+
+- SQL Server
+- Python
+
+## Clonar 
+
+1 - Clone o repositório:
+git clone https://github.com/seu-usuario/nome-do-repositorio.git ou seja 
+https://github.com/LeonMartim/banco_cinema
+
+2 - Entre na pasta do projeto:
+cd nome-do-repositorio
+cd banco_cinema
+
+3- nstale as dependências Python (se houver):
+pip install pyodbc
+
+4 - Execute a interface do usuário:
+python UserFuncoesSqL.py
+
+## Como usar
+
+1. Abra o SQL Server Management Studio.
+2. Crie um banco chamado cinema ou um nome de sua preferencia.
+3. Execute o arquivo `cinema.sql` (tabelas, Insert e os select para ver se esta ok).
+4. Explore com as consultas do arquivo `FuncoesSqL.py` e `UserFuncoesSqL.py`.
+
+## Os arquivos `FuncoesSqL.py` e `UserFuncoesSqL.py`
+
+Estão estruturados de maneira que `UserFuncoesSqL.py` contem apenas a interface do usaurio com um menu de opcoes,
+1 - Inserir filme
+2 - Listar filmes
+3 - Listar Personagem
+4 - Deletar Filme
+0 - Sair 
+dando a possibilidade de escolha, e organizacao de arquivos de maneira separada.
+
+Já o `FuncoesSqL.py` está conectando com o Banco SqlServer 
+def colectar():
+    conn_str = (
+        r"Driver={SQL Server};"
+        r"Server=.\SQLEXPRESS02;"
+        r"Database=cinema;"
+        r"Trusted_Connection=yes;"
+    )
+    return pyodbc.connect(conn_str)
+contendo as funcoes de manipulcao do Banco cinema 
+def inserir_filme()
+def listar_filmes()
+def listar_Personagem()
+def deletar_Filme()
+Trabalhando também com tratamento de erros `try: except`
+

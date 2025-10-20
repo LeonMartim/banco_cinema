@@ -56,8 +56,8 @@ def main():
                 print("Para evitar erro de integridade referencial, primeiro exclua os Personagens associados.\n")
 
                 personagens = listar_personagem(cursor)
-                print(f"{'ID personagem':<18} {'Id filme':<25} {'Nome personagem':<25} {'Cache'}")
-                print("-" * 60)
+                print(f"{'ID personagem':<18} {'Id filme':<25} {'Id autor':<25}  {'Nome personagem'}")
+                print("-" * 90)
                 for p in personagens:
                     print(f'{p[0]:<18} {p[1]:<25} {p[2]:<25} {str(p[3])}')
 
